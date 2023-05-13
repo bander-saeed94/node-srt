@@ -9,6 +9,10 @@ const {
   readChunks
 } = require('../src/async-read-modes');
 
+const {
+  sliceBufferToChunks,
+} = require('./tools');
+
 const DEFAULT_MTU_SIZE = 1316; // (for writes) should be the maximum on all IP networks cases
 const DEFAULT_WRITES_PER_TICK = 128; // tbi
 const DEFAULT_READ_BUFFER = READ_BUF_SIZE; // typical stream buffer size read in Node-JS internals
