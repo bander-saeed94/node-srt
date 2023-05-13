@@ -99,7 +99,7 @@ class SRTConnection extends EventEmitter {
     this.emit('closing');
     const result = await asyncSrt.close(this.fd);
     this.emit('closed', result);
-    this.off();
+    // this.off();
     return result;
   }
 
